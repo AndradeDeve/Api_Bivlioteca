@@ -3,6 +3,6 @@ import userController from "./controllers/userController.js";
 
 const routes = express();
 
-routes.use("/usuario", userController);
+routes.use("/user", userController);
 
 export default routes;
