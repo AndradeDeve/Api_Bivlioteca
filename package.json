@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon  src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "generate_migration": "npx typeorm -d ./src/database/data-souce.js migration:generate ./src/database/migration/db --outputJs",
+    "run_migrations": "npx typeorm -d ./src/database/data-souce.js migration:run"
   },
   "author": "Robozinho",
   "license": "MIT",
   "type": "module",
   "dependencies": {
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "mysql2": "^3.14.0",
+    "nodemon": "^3.1.9",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.22"
   }
 }
